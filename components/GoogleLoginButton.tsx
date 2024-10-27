@@ -17,7 +17,7 @@ const GoogleLoginButton: React.FC<GoogleAuthButtonProps> = ({ mode }) => {
 
   const handleGoogleLogin = () => {
     setIsLoading(true);
-    const redirectUri = encodeURIComponent("http://localhost:3000/api/auth/callback/google");
+    const redirectUri = encodeURIComponent("https://legal-books.vercel.app/api/auth/callback/google");
     const scopes = encodeURIComponent("https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid");
     const googleAuthUrl = `https://accounts.google.com/o/oauth2/auth?client_id=384283838773-n75keilq31fi11ja15vb0gmrja2kol61.apps.googleusercontent.com&redirect_uri=${redirectUri}&response_type=code&scope=${scopes}&state=${mode}`;
 
